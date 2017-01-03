@@ -7,4 +7,4 @@ RUN apk add --update avahi && \
 USER avahi
 WORKDIR /etc/avahi
 
-ENTRYPOINT ["/usr/sbun/avahi-daemon"]
+ENTRYPOINT ["/usr/sbin/avahi-daemon", "--no-rlimits"]
