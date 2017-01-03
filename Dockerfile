@@ -4,7 +4,6 @@ MAINTAINER Steve Buzonas <steve@fancyguy.com>
 RUN apk add --update avahi && \
     rm -rf /var/cache/api/*
 
-USER avahi
 WORKDIR /etc/avahi
 
 ENTRYPOINT ["/usr/sbin/avahi-daemon", "--no-rlimits"]
